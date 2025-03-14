@@ -9,6 +9,7 @@ import OrderCake from './OrderCake';
 import BakeryCart from './BakeryCart';
 import { Provider } from 'react-redux';
 import { store } from './redux/configure-store';
+import ListCakes from './ListCakes';
 
 function BakeryManager() {
 	return (
@@ -32,6 +33,9 @@ function BakeryManager() {
 								</li>
 								<li>
 									<NavLink to="/bakery/retire-cake">Retire a cake</NavLink>
+								</li>
+								<li>
+									<NavLink to="/bakery/list-cakes">List all cakes</NavLink>
 								</li>
 								<li>
 									<NavLink to="/bakery/search-cakes">Find cakes</NavLink>
@@ -62,6 +66,10 @@ function BakeryManager() {
 							<Route
 								path="retire-cake"
 								element={<RetireCake />}
+							/>
+							<Route
+								path="list-cakes"
+								element={<ListCakes />}
 							/>
 							<Route
 								path="search-cakes"
