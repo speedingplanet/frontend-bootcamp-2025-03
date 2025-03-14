@@ -5,6 +5,7 @@ import './App.css';
 import LabManager from './labs/LabManager';
 import ZipPayManager from './zippay/ZipPayManager';
 import Calculator from './calculator/Calculator';
+import BakeryManager from './bakery/BakeryManager';
 
 function App() {
 	return (
@@ -23,6 +24,9 @@ function App() {
 						</li>
 						<li>
 							<NavLink to="/zippay">ZipPay</NavLink>
+						</li>
+						<li>
+							<NavLink to="/bakery">Rolling Scones</NavLink>
 						</li>
 					</ul>
 				</nav>
@@ -43,6 +47,10 @@ function App() {
 					<Route
 						path="calculator"
 						element={<Calculator />}
+					/>
+					<Route
+						path="bakery/*"
+						element={<BakeryManager />}
 					/>
 				</Routes>
 			</BrowserRouter>
