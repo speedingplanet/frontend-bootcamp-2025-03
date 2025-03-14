@@ -1,7 +1,7 @@
 import React from 'react';
 import { CakeShapes, getTypedFormData, InputCake } from './bakery-types';
 import { useAppDispatch } from './redux/hooks';
-import { addCake } from './redux/cake-slice';
+import { addCake, saveCake } from './redux/cake-slice';
 
 function AddCake() {
 	let dispatch = useAppDispatch();
@@ -13,7 +13,7 @@ function AddCake() {
 		let newCake: Partial<InputCake> = {};
 		for (let [key, value] of formData.entries()) {
 			if (key === 'shape') {
-				newCake[key] = value as CakeShapes
+				newCake[key] = value as CakeShapes;
 			} else if (key === 'servings') {
 				newCake[key] = Number(value);
 			} else {
@@ -21,7 +21,8 @@ function AddCake() {
 			}
 		}
 
-		dispatch(addCake(newCake as InputCake));
+		// dispatch(addCake(newCake as InputCake));
+		dispatch(saveCake(newCake as InputCake));
 	};
 
 	return (

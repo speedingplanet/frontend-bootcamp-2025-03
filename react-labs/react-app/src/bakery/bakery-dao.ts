@@ -1,4 +1,4 @@
-import { Cake } from './bakery-types';
+import { Cake, InputCake } from './bakery-types';
 
 let baseURL = 'http://localhost:5100/cakes';
 
@@ -16,12 +16,12 @@ export async function getAllCakes(): Promise<Array<Cake>> {
 	}
 }
 
-export async function persistCake(cake: Cake): Promise<Cake> {
+export async function persistCake(cake: InputCake): Promise<Cake> {
 	try {
 		let response = await fetch(baseURL, {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify(cake),
+			body: JSON.stringify({...cake, retired: false}),
 		});
 		if (response.ok) {
 			return (await response.json()) as Cake;

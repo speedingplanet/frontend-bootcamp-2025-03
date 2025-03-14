@@ -1,14 +1,24 @@
 {
-	"cakes": [
-		{
-			"name": "Test cake",
-			"shape": "circle",
-			"servings": 4,
-			"cakeFlavor": "chocolate",
-			"frostingFlavor": "vanilla",
-			"fillingFlavor": "none",
-			"id": "gVbL-yU3HW-N7UeBrRtzN",
-			"retired": false
-		}
-	]
+  "cakes": [
+    {
+      "name": "Test cake",
+      "shape": "circle",
+      "servings": 4,
+      "cakeFlavor": "chocolate",
+      "frostingFlavor": "vanilla",
+      "fillingFlavor": "none",
+      "id": "gVbL-yU3HW-N7UeBrRtzN",
+      "retired": false
+    },
+    {
+      "id": "96e8",
+      "name": "Chocolate cake",
+      "shape": "square",
+      "servings": 6,
+      "cakeFlavor": "chocolate",
+      "frostingFlavor": "chocolate",
+      "fillingFlavor": "chocolate",
+      "retired": false
+    }
+  ]
 }
